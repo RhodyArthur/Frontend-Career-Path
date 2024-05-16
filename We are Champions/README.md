@@ -30,6 +30,6 @@ Clone this repository to your local machine.
 Navigate to the project directory.
 Open the index.html file in your web browser.
 Usage
-Upon opening the app, users can send endorsements by filling out the "From", "To", and "Message" fields and clicking the "Send" button.
+Upon opening the app, users can send endorsements by filling out the "From", "To", and "Message" fields and clicking the "Publish" button.
 Users can view received endorsements on the main screen.
 The app works offline, allowing users to send and receive endorsements even without an internet connection.

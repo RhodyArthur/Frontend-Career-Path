@@ -35,11 +35,11 @@ img {
 .text-area {
   width: 317px;
   height: 118px;
-  margin-bottom: 8px; /* Add some space below the text area */
+  margin-bottom: 8px;
   border-radius: 8px;
   border: none;
   background: #444059;
-  color: #8f8f8f;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
@@ -63,7 +63,7 @@ img {
   line-height: 20px;
   text-align: center;
   background: #444059;
-  color: #8f8f8f;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
@@ -100,8 +100,10 @@ img {
   width: 317px;
   height: fit-content;
   background: #ffffff;
-  padding: 5px;
+  padding: 1px;
+  border-radius: 8px;
 }
+
 .like-container {
   position: absolute;
   bottom: 5px; /* Adjust as needed */
