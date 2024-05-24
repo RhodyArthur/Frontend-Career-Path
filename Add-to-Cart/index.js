@@ -26,7 +26,19 @@ const shoppingListEl = document.getElementById("shopping-list");
 addBtn.addEventListener("click", function () {
   let inputValue = inputEl.value;
 
-  push(shoppingListInDB, inputValue);
+  // if (shoppingListEl.includes(inputValue)) {
+  //   shoppingListEl.innerHTML = "No duplicates";
+  //   clearInputField();
+  // } else {
+  //   push(shoppingListInDB, inputValue);
+  // }
+
+  // Prevent adding duplicates
+  if (!isDuplicate(inputValue)) {
+    push(shoppingListInDB, inputValue);
+  } else {
+    alert("Item already exists in the list");
+  }
 
   clearInputField();
 });
@@ -52,6 +64,16 @@ onValue(shoppingListInDB, function (snapshot) {
     shoppingListEl.innerHTML = "No items here... yet";
   }
 });
+
+function isDuplicate(inputValue) {
+  let items = shoppingListEl.querySelectorAll("li");
+  for (let item of items) {
+    if (item.textContent === inputValue) {
+      return true;
+    }
+  }
+  return false;
+}
 
 // Clear shopping list
 function clearShoppingList() {
