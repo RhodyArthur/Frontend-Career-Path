@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Food Ordering App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Rhody's Diner</h1>
+        <p>The best burgers and pizzas in town.</p>
+    </header>
+    <main>
+        <div class="menu-list" id="menu-list">
+            <!-- dynamically add items -->
+        </div>
+
+        <div class="checkout-modal hidden" id="checkout-modal">
+            <h2 class="order-title">Your Order</h2>
+            <div id="order-summary">
+                <!-- dynamically added order summary -->
+            </div>
+            <hr />
+            <div class="total-modal" id="total-modal">
+                <!-- dynamically add total  -->
+            </div>
+            <button class="purchase-btn" id="purchase-btn">Complete Order</button>
+        </div>
+
+        <div class="payment-modal hidden" id="payment-modal">
+            <h2 class="payment-title">Enter card details</h2>
+            <form id="consent-form">
+                <input type="text" name="name" placeholder="Enter your name" class="rectangle" required>
+                <input type="text" name="card-number" placeholder="Enter card number" class="rectangle" required>
+                <input type="text" name="cvv" placeholder="Enter CVV" class="rectangle" required>
+
+                <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+                <div id="error-message" style="color: red; margin-top: 10px;"></div>
+            </form>
+            </form>
+        </div>
+
+        <div class="thank-you-note hidden" id="thank-you-note"></div>
+    </main>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
